@@ -5,7 +5,7 @@ def exercicio(parametro):
     lista_ordenada = sorted(parametro)
 
     while contador < len(lista_ordenada):
-        testar_multiplos_tres = int(lista_ordenada[contador] % 3)
+        testar_multiplos_tres = lista_ordenada[contador] % 3
         if testar_multiplos_tres == 0:
             if lista_ordenada[contador] > variavel_teste:
                 variavel_teste = lista_ordenada[contador]
@@ -13,9 +13,8 @@ def exercicio(parametro):
         resultado = variavel_teste
         contador += 1
 
-    print(resultado)
-
+    return resultado
 
 lista_inteiros = [-6, -91, 1011, -100, 84, -22, 0, 1, 473]
 
-exercicio(lista_inteiros)
+print(exercicio(lista_inteiros))
